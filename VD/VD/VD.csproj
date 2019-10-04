@@ -1,0 +1,595 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{01444347-577C-4D02-9D6F-3386539CD000}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VD</RootNamespace>
+    <AssemblyName>VD</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Charts.v14.1.Core, Version=14.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v14.1, Version=14.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.DataAccess.v14.1, Version=14.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v14.1.Core, Version=14.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v14.1.Core, Version=14.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v14.1.Core, Version=14.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v14.1.Core, Version=14.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v14.1.Core, Version=14.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v14.1, Version=14.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v14.1.UI, Version=14.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v14.1, Version=14.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v14.1, Version=14.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v14.1, Version=14.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v14.1, Version=14.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGauges.v14.1.Core, Version=14.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v14.1, Version=14.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v14.1, Version=14.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraNavBar.v14.1, Version=14.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v14.1, Version=14.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v14.1, Version=14.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v14.1.Extensions, Version=14.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v14.1, Version=14.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v14.1.Core, Version=14.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DirectX.Capture, Version=1.0.1313.24984, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\DirectX.Capture.dll</HintPath>
+    </Reference>
+    <Reference Include="DShowNET, Version=1.0.0.1, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\DShowNET.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CS\AccessData.cs" />
+    <Compile Include="CS\ClsConnect.cs" />
+    <Compile Include="DLL\frmHuongDan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DLL\frmHuongDan.Designer.cs">
+      <DependentUpon>frmHuongDan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DLL\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DLL\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DLL\frmRfid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DLL\frmRfid.Designer.cs">
+      <DependentUpon>frmRfid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DLL\frmTrangChu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DLL\frmTrangChu.Designer.cs">
+      <DependentUpon>frmTrangChu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CS\Program.cs" />
+    <Compile Include="DLL\ImageInSQL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DLL\ImageInSQL.Designer.cs">
+      <DependentUpon>ImageInSQL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ETCManagerDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ETCManagerDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="REPORT\rptDangKyMoi.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORT\rptDangKyMoi.Designer.cs">
+      <DependentUpon>rptDangKyMoi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORT\rptThoiHan.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORT\rptThoiHan.Designer.cs">
+      <DependentUpon>rptThoiHan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="USER\ucChange.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="USER\ucChange.Designer.cs">
+      <DependentUpon>ucChange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="USER\ucNapTien.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="USER\ucNapTien.Designer.cs">
+      <DependentUpon>ucNapTien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="USER\ucThemMoi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="USER\ucThemMoi.Designer.cs">
+      <DependentUpon>ucThemMoi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="USER\ucTimKiem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="USER\ucTimKiem.Designer.cs">
+      <DependentUpon>ucTimKiem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="USER\ucAboutUs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="USER\ucAboutUs.Designer.cs">
+      <DependentUpon>ucAboutUs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="USER\ucCalendar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="USER\ucCalendar.Designer.cs">
+      <DependentUpon>ucCalendar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="USER\ucDanhsachKH.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="USER\ucDanhsachKH.Designer.cs">
+      <DependentUpon>ucDanhsachKH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="USER\ucDanhsachTK.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="USER\ucDanhsachTK.Designer.cs">
+      <DependentUpon>ucDanhsachTK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="USER\ucDanhsachXe.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="USER\ucDanhsachXe.Designer.cs">
+      <DependentUpon>ucDanhsachXe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="USER\ucManhinhchinh.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="USER\ucManhinhchinh.Designer.cs">
+      <DependentUpon>ucManhinhchinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="USER\ucThemmoiB1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="USER\ucThemmoiB1.Designer.cs">
+      <DependentUpon>ucThemmoiB1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="USER\ucThemmoiB2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="USER\ucThemmoiB2.Designer.cs">
+      <DependentUpon>ucThemmoiB2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="USER\ucThemmoiB3.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="USER\ucThemmoiB3.Designer.cs">
+      <DependentUpon>ucThemmoiB3.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="DLL\frmHuongDan.resx">
+      <DependentUpon>frmHuongDan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DLL\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DLL\frmRfid.resx">
+      <DependentUpon>frmRfid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DLL\frmTrangChu.resx">
+      <DependentUpon>frmTrangChu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DLL\ImageInSQL.resx">
+      <DependentUpon>ImageInSQL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORT\rptDangKyMoi.resx">
+      <DependentUpon>rptDangKyMoi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORT\rptThoiHan.resx">
+      <DependentUpon>rptThoiHan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="USER\ucChange.resx">
+      <DependentUpon>ucChange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="USER\ucNapTien.resx">
+      <DependentUpon>ucNapTien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="USER\ucThemMoi.resx">
+      <DependentUpon>ucThemMoi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="USER\ucTimKiem.resx">
+      <DependentUpon>ucTimKiem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="USER\ucAboutUs.resx">
+      <DependentUpon>ucAboutUs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="USER\ucCalendar.resx">
+      <DependentUpon>ucCalendar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="USER\ucDanhsachKH.resx">
+      <DependentUpon>ucDanhsachKH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="USER\ucDanhsachTK.resx">
+      <DependentUpon>ucDanhsachTK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="USER\ucDanhsachXe.resx">
+      <DependentUpon>ucDanhsachXe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="USER\ucManhinhchinh.resx">
+      <DependentUpon>ucManhinhchinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="USER\ucThemmoiB1.resx">
+      <DependentUpon>ucThemmoiB1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="USER\ucThemmoiB2.resx">
+      <DependentUpon>ucThemmoiB2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="USER\ucThemmoiB3.resx">
+      <DependentUpon>ucThemmoiB3.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="ETCManagerDataSet.xsc">
+      <DependentUpon>ETCManagerDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ETCManagerDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ETCManagerDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ETCManagerDataSet.xss">
+      <DependentUpon>ETCManagerDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMAGE\Accept-database.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMAGE\Addons.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMAGE\Add-ticket.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMAGE\Analysis.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMAGE\Announcements.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMAGE\Attachment.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMAGE\Audio-filevsvg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMAGE\Autocomplete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMAGE\Billboard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMAGE\Bmp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMAGE\Bulb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMAGE\Catalog.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMAGE\Computer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMAGE\Content.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMAGE\Content-reorder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMAGE\Content-tree.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMAGE\Continue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMAGE\Eps.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMAGE\File-explorer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMAGE\Glossary.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMAGE\Go-back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMAGE\Go-into.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMAGE\Hide-left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMAGE\Hide-right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMAGE\Home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMAGE\Key.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMAGE\Keys.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMAGE\Layout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMAGE\Locked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMAGE\Mailbox.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMAGE\Maintenance.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMAGE\Man.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMAGE\My-tickets.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMAGE\Navigate-down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMAGE\Navigate-left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMAGE\Navigate-right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMAGE\Navigate-up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMAGE\Open-folder-accept.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMAGE\Open-folder-add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMAGE\Open-folder-delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMAGE\Open-folder-full.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMAGE\Open-folder-info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMAGE\Open-folder-search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMAGE\Open-folder-warning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMAGE\Options.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMAGE\Order.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMAGE\Organization.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMAGE\Paperclip.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMAGE\Paste.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMAGE\Pause.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMAGE\Percent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMAGE\Refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMAGE\Remove-event.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMAGE\Remove-ticket.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMAGE\Rename.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMAGE\Rules.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMAGE\Schedule.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMAGE\Scorm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMAGE\Ticket.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMAGE\Unlocked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\truck.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMAGE\ETC 2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMAGE\DSC01920.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMAGE\Printer-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMAGE\Apps-evolution-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMAGE\new-text-message2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMAGE\delete-text-message.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMAGE\show-text-message.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMAGE\fax.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMAGE\Forward.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMAGE\Backward.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMAGE\CCTV-Camera-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMAGE\object_14.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMAGE\Link.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMAGE\earth.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMAGE\unlocked_01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMAGE\Recycle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMAGE\about.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMAGE\delete_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMAGE\Money-Bag-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMAGE\Exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMAGE\zoom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMAGE\money_03.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMAGE\software_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMAGE\refresh %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMAGE\B1.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMAGE\B2.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMAGE\B3.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMAGE\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMAGE\object_15.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMAGE\money_01.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

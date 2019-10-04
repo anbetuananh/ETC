@@ -1,0 +1,542 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C36396AB-41A5-4B01-BE09-0693C2015CE8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VD1</RootNamespace>
+    <AssemblyName>VD1</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Charts.v14.1.Core, Version=14.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v14.1, Version=14.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v14.1, Version=14.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v14.1.Core, Version=14.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v14.1.Core, Version=14.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v14.1.Core, Version=14.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v14.1.Core, Version=14.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v14.1.Core, Version=14.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v14.1, Version=14.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v14.1.UI, Version=14.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v14.1, Version=14.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v14.1, Version=14.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v14.1, Version=14.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v14.1, Version=14.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGauges.v14.1.Core, Version=14.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v14.1, Version=14.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v14.1, Version=14.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraNavBar.v14.1, Version=14.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v14.1, Version=14.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v14.1, Version=14.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v14.1.Extensions, Version=14.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationClient" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Cs\AccountInfo.cs" />
+    <Compile Include="Cs\UpdateCSDL.cs" />
+    <Compile Include="Cs\CarInfo.cs" />
+    <Compile Include="Cs\ClsConnect.cs" />
+    <Compile Include="Cs\ThaoTac.cs" />
+    <Compile Include="Dll\frmConnectRfid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dll\frmConnectRfid.Designer.cs">
+      <DependentUpon>frmConnectRfid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dll\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dll\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dll\frmTrangChu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dll\frmTrangChu.Designer.cs">
+      <DependentUpon>frmTrangChu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cs\Program.cs" />
+    <Compile Include="Cs\Ex_Car.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Cs\TollInfo.cs" />
+    <Compile Include="Report\rptDoanhThu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rptDoanhThu.Designer.cs">
+      <DependentUpon>rptDoanhThu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\rptViPham.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rptViPham.Designer.cs">
+      <DependentUpon>rptViPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\rptHoaDonVP.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rptHoaDonVP.Designer.cs">
+      <DependentUpon>rptHoaDonVP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\ucHelp.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User\ucHelp.Designer.cs">
+      <DependentUpon>ucHelp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\ucAboutUs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User\ucAboutUs.Designer.cs">
+      <DependentUpon>ucAboutUs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\ucViPham.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User\ucViPham.Designer.cs">
+      <DependentUpon>ucViPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\ucDanhsachKH.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User\ucDanhsachKH.Designer.cs">
+      <DependentUpon>ucDanhsachKH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\ucDanhsachTK.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User\ucDanhsachTK.Designer.cs">
+      <DependentUpon>ucDanhsachTK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\ucDanhsachXe.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User\ucDanhsachXe.Designer.cs">
+      <DependentUpon>ucDanhsachXe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\ucMainScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User\ucMainScreen.Designer.cs">
+      <DependentUpon>ucMainScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cs\ViolationInfo.cs" />
+    <EmbeddedResource Include="Dll\frmConnectRfid.resx">
+      <DependentUpon>frmConnectRfid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dll\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dll\frmTrangChu.resx">
+      <DependentUpon>frmTrangChu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Report\rptDoanhThu.resx">
+      <DependentUpon>rptDoanhThu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptViPham.resx">
+      <DependentUpon>rptViPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptHoaDonVP.resx">
+      <DependentUpon>rptHoaDonVP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\ucHelp.resx">
+      <DependentUpon>ucHelp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\ucAboutUs.resx">
+      <DependentUpon>ucAboutUs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\ucViPham.resx">
+      <DependentUpon>ucViPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\ucDanhsachKH.resx">
+      <DependentUpon>ucDanhsachKH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\ucDanhsachTK.resx">
+      <DependentUpon>ucDanhsachTK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\ucDanhsachXe.resx">
+      <DependentUpon>ucDanhsachXe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\ucMainScreen.resx">
+      <DependentUpon>ucMainScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\My-tickets.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\Accept-database.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\Addons.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\Add-ticket.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\Analysis.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\Announcements.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\Attachment.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\Audio-filevsvg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\Autocomplete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\Billboard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\Bmp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\Bulb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\Catalog.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\Computer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\Content.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\Content-reorder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\Content-tree.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\Continue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\Eps.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\File-explorer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\Glossary.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\Go-back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\Go-into.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\Hide-left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\Hide-right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\Home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\Key.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\Keys.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\Layout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\Locked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\Mailbox.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\Maintenance.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\Man.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\My-tickets.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\Navigate-down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\Navigate-left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\Navigate-right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\Navigate-up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\Open-folder-accept.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\Open-folder-add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\Open-folder-delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\Open-folder-full.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\Open-folder-info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\Open-folder-search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\Open-folder-warning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\Options.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\Order.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\Organization.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\Paperclip.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\Paste.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\Pause.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\Percent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\Refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\Remove-event.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\Remove-ticket.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\Rename.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\Rules.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\Schedule.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\Scorm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\Ticket.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\Unlocked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Remove-ticket.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Remove-ticket1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Percent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Scorm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\My-tickets1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Key.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\software_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\unlocked_01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Options.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Computer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Content-tree.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\charts05.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shopping.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\charts051.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shopping1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\charts052.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shopping2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\charts053.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shopping3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\unlocked_01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\windows.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\apple.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\Profile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\Exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\Cabriolet_Red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\Car_Grey.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\ExecutiveCar_Black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\Modify.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\Print.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\flag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\Lorry-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\Cabriolet-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\Bar Chart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\shopping_ bag_64x64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\PoliceCar-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\My-Email-Attachments-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\folder-green-explorer-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\3D-User-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\2.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
